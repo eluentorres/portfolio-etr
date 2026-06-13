@@ -10,7 +10,7 @@ export default function menu() {
     navLinks.classList.toggle('active');
   });
 
-  // Cerrar el menú automáticamente al hacer clic en cualquier enlace
+  // Cierra el menú automáticamente al hacer clic en cualquier enlace
   const links = navLinks.querySelectorAll('a');
   links.forEach(link => {
     link.addEventListener('click', () => {

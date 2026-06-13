@@ -5,12 +5,12 @@ export default function skillsList() {
   // Solo se ejecuta si estamos en la página que contiene este contenedor (index.html)
   if (!container) return; 
 
-  // 1. Filtrar las habilidades dominadas
+  // Filtrar las habilidades dominadas
   const dominadas = skills.filter(skill => skill.state === 'dominada');
 
-  // 2. Generar el HTML mapeando el array
+  //  HTML mapeando el array
   const skillsHTML = dominadas.map(skill => {
-    // Generar las etiquetas (tags) individuales
+    // Etiquetas (tags) individuales
     const tagsHTML = skill.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('');
 
     return `
@@ -29,8 +29,8 @@ export default function skillsList() {
   }).join(''); 
   
   
-  // Unir todo el array en una sola cadena de texto HTML
+  // Todo el array en una sola cadena de texto HTML
 
-  // 3. Inyectar en el DOM
+  //  DOM
   container.innerHTML = skillsHTML;
 }

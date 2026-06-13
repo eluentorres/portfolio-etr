@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía rápida y hoja de trucos de JavaScript por Eluen Ariel Torres Rivera.">
+  <title>Cheatsheet JavaScript | Eluen Ariel Torres Rivera</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <div class="cheatsheet-layout">
+    <aside class="cheatsheet-sidebar">
+      <nav class="sticky-nav">
+        <h3>Contenido JS</h3>
+        <ul>
+          <li><a href="#dom">Manipulación DOM</a></li>
+          <li><a href="#metodos">Métodos de Arrays</a></li>
+          <li><a href="#asincronia">Asincronía</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="cheatsheet-main-content">
+      <h1>Hoja de Trucos JavaScript (ES6+)</h1>
+      <p>Referencia técnica para manipulación del árbol de elementos, operaciones avanzadas funcionales con colecciones de datos y flujos asíncronos.</p>
+
+      <section id="dom">
+        <h2>1. Selección y Manipulación del DOM</h2>
+        <p>Métodos estándar para interactuar con la interfaz del documento y reaccionar a acciones dinámicas ejecutadas por el usuario:</p>
+        <pre><code>// Seleccionar elementos
+const button = document.querySelector('#theme-toggle');
+
+// Escuchar un evento de clic
+button.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});</code></pre>
+      </section>
+
+      <section id="metodos">
+        <h2>2. Métodos de Arrays Modernos (Inmutables)</h2>
+        <p>Transformación y filtrado eficaz de colecciones sin alterar la estructura original de los datos:</p>
+        <pre><code>const skills = [
+  { name: 'Git', state: 'dominada' },
+  { name: 'Python', state: 'aprendiendo' }
+];
+
+// Filtrar elementos
+const dominadas = skills.filter(s => s.state === 'dominada');
+
+// Mapear a cadenas de texto HTML
+const htmlList = dominadas.map(s => `&lt;li&gt;${s.name}&lt;/li&gt;`).join('');</code></pre>
+      </section>
+
+      <section id="asincronia">
+        <h2>3. Promesas y Flujos de Control Asíncronos</h2>
+        <p>Estructura moderna utilizando <code>async/await</code> para manejar peticiones de red o ejecuciones en segundo plano de manera legible:</p>
+        <pre><code>async function obtenerDatos(url) {
+  try {
+    const respuesta = await fetch(url);
+    const datos = await respuesta.json();
+    console.log(datos);
+  } catch (error) {
+    console.error("Error en la petición:", error);
+  }
+}</code></pre>
+      </section>
+    </main>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

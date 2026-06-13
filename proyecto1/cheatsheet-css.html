@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía rápida y hoja de trucos de CSS3 por Eluen Ariel Torres Rivera.">
+  <title>Cheatsheet CSS3 | Eluen Ariel Torres Rivera</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <div class="cheatsheet-layout">
+    <aside class="cheatsheet-sidebar">
+      <nav class="sticky-nav">
+        <h3>Contenido CSS</h3>
+        <ul>
+          <li><a href="#variables">Variables CSS</a></li>
+          <li><a href="#flexbox">Flexbox Layout</a></li>
+          <li><a href="#grid">CSS Grid</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="cheatsheet-main-content">
+      <h1>Hoja de Trucos CSS3</h1>
+      <p>Conceptos avanzados y configuraciones clave para dominar el diseño responsivo, arquitecturas modernas y sistemas de color variables.</p>
+
+      <section id="variables">
+        <h2>1. Variables Nativas (Custom Properties)</h2>
+        <p>Permiten almacenar valores reutilizables en todo el documento, facilitando la implementación de características complejas como el modo oscuro:</p>
+        <pre><code>:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e293b;
+  --font-base: 'Arial', sans-serif;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-family: var(--font-base);
+}</code></pre>
+      </section>
+
+      <section id="flexbox">
+        <h2>2. Caja Flexible (Flexbox)</h2>
+        <p>Ideal para alinear elementos en una sola dimensión (filas o columnas). Controla la distribución del espacio de forma predictiva:</p>
+        <pre><code>.container {
+  display: flex;
+  flex-direction: row; /* u o bien 'column' */
+  justify-content: space-between; /* Alineación horizontal */
+  align-items: center; /* Alineación vertical */
+  flex-wrap: wrap; /* Salto de línea si el espacio falta */
+}</code></pre>
+      </section>
+
+      <section id="grid">
+        <h2>3. Rejilla Bidimensional (CSS Grid)</h2>
+        <p>Diseñado para controlar filas y columnas simultáneamente. El uso de <code>auto-fit</code> es excelente para layouts responsivos sin usar media queries:</p>
+        <pre><code>.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}</code></pre>
+      </section>
+    </main>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

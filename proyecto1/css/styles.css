@@ -440,3 +440,348 @@ body.dark-mode .icon-luna { display: inline-block; }
     box-shadow: 0 10px 15px rgba(0,0,0,0.2);
   }
 }
+
+
+/* ESTILOS SPRINT 5 - CHEATSHEETS EN HOME */
+.cheatsheets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.cheatsheet-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.cheatsheet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.cheatsheet-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cheatsheet-card h3 {
+  color: var(--secondary);
+  font-size: 1.3rem;
+}
+
+.cheatsheet-card p {
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.cheatsheet-link-text {
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+  font-size: 0.9rem;
+}
+
+/* ESTILOS PÁGINA DE RECURSOS (SISTEMA DE TABS) */
+.resources-page-main {
+  margin-top: 2rem;
+}
+
+.resources-intro {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.resources-intro h1 {
+  font-size: 3rem;
+  font-weight: var(--fw-black);
+  margin-bottom: 1rem;
+}
+
+.tabs-layout-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.tabs-nav-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.tab-btn {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: var(--fw-medium);
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+  transition: all var(--transition);
+}
+
+.tab-btn:hover {
+  background: var(--light-gray);
+  color: var(--secondary);
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Paneles de Contenido */
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--gray);
+  padding-bottom: 0.5rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-item-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resource-item-card h4 {
+  font-size: 1.15rem;
+  color: var(--secondary);
+}
+
+.resource-item-card p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.resource-item-card a {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* EXTENSIÓN MODO OSCURO PARA TABS Y CHEATSHEETS */
+body.dark-mode .cheatsheet-card,
+body.dark-mode .tabs-nav-bar,
+body.dark-mode .resource-item-card {
+  background: #1e293b;
+  box-shadow: none;
+  border: 1px solid #334155;
+}
+
+body.dark-mode .cheatsheet-card h3,
+body.dark-mode .resource-item-card h4,
+body.dark-mode .tab-panel h3 {
+  color: var(--white);
+}
+
+body.dark-mode .tab-btn:hover {
+  background: #334155;
+  color: var(--white);
+}
+
+body.dark-mode .tab-btn.active {
+  background: var(--primary);
+}
+
+/* RESPONSIVE TABS */
+@media (max-width: 900px) {
+  .tabs-layout-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .tabs-nav-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    width: auto;
+  }
+}
+
+
+
+
+/* ESTILOS DE LAS HOJAS DE TRUCOS (CHEATSHEETS)*/
+
+.cheatsheet-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+/* Barra lateral de navegación */
+.cheatsheet-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px; /* Se queda fija a 100px del borde superior al hacer scroll */
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.sticky-nav h3 {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-weight: var(--fw-bold);
+  border-bottom: 2px solid var(--light-gray);
+  padding-bottom: 0.5rem;
+}
+
+.sticky-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.sticky-nav ul li a {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.sticky-nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* Área de contenido del Cheatsheet */
+.cheatsheet-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cheatsheet-main-content h1 {
+  font-size: 2.8rem;
+  font-weight: var(--fw-black);
+  margin-bottom: 0.5rem;
+}
+
+.cheatsheet-main-content section {
+  padding-top: 20px;
+}
+
+.cheatsheet-main-content h2 {
+  font-size: 1.6rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.cheatsheet-main-content p {
+  font-size: 1.05rem;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Estilos de los Bloques de Código */
+pre {
+  background: #1e293b; /* Fondo azul oscuro/gris para legibilidad */
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto; /* Scroll horizontal si el código es largo */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border: 1px solid #334155;
+  margin: 1rem 0;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* SOPORTE DE MODO OSCURO PARA CHEATSHEETS */
+body.dark-mode .cheatsheet-sidebar {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: none;
+}
+
+body.dark-mode .sticky-nav h3,
+body.dark-mode .cheatsheet-main-content h2 {
+  color: var(--white);
+}
+
+body.dark-mode .sticky-nav ul li a {
+  color: #94a3b8;
+}
+
+body.dark-mode .sticky-nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* REQUISITO: DISEÑO RESPONSIVE (Ocultar navegación sticky en móviles) */
+@media (max-width: 768px) {
+  .cheatsheet-layout {
+    grid-template-columns: 1fr; /* Una sola columna a pantalla completa */
+    gap: 1rem;
+  }
+
+  .cheatsheet-sidebar {
+    display: none; /* Oculta por completo el menú sticky en móvil */
+  }
+  
+  .cheatsheet-main-content h1 {
+    font-size: 2.2rem;
+  }
+}

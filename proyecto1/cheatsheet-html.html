@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía rápida y hoja de trucos de HTML5 por Eluen Ariel Torres Rivera.">
+  <title>Cheatsheet HTML5 | Eluen Ariel Torres Rivera</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <div class="cheatsheet-layout">
+    <aside class="cheatsheet-sidebar">
+      <nav class="sticky-nav">
+        <h3>Contenido HTML</h3>
+        <ul>
+          <li><a href="#estructura">Estructura Base</a></li>
+          <li><a href="#semantica">Elementos Semánticos</a></li>
+          <li><a href="#formularios">Formularios y Atributos</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="cheatsheet-main-content">
+      <h1>Hoja de Trucos HTML5</h1>
+      <p>Una guía de referencia rápida para recordar la estructura, buenas prácticas y elementos semánticos esenciales en la maquetación web moderna.</p>
+
+      <section id="estructura">
+        <h2>1. Estructura Estándar de un Documento</h2>
+        <p>Todo documento HTML5 estructurado correctamente debe iniciar con la declaración del tipo de documento y contener las etiquetas jerárquicas fundamentales:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Título del Documento&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- El contenido visible va aquí --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </section>
+
+      <section id="semantica">
+        <h2>2. Elementos Semánticos Esenciales</h2>
+        <p>La semántica ayuda a los motores de búsqueda (SEO) y a las tecnologías de asistencia (accesibilidad) a comprender el propósito del contenido.</p>
+        <ul>
+          <li><code>&lt;header&gt;</code>: Cabecera introductoria de la página o de una sección.</li>
+          <li><code>&lt;nav&gt;</code>: Contenedor que aloja los bloques de enlaces de navegación de la aplicación.</li>
+          <li><code>&lt;main&gt;</code>: Representa el contenido central y único de todo el documento.</li>
+          <li><code>&lt;section&gt;</code>: Agrupamiento genérico de contenido temático relacionado.</li>
+          <li><code>&lt;article&gt;</code>: Composición autónoma e independiente (ej. una tarjeta o post).</li>
+          <li><code>&lt;aside&gt;</code>: Contenido secundario o tangencial a lo principal (barras laterales).</li>
+          <li><code>&lt;footer&gt;</code>: Pie de página o sección con metadatos, autorías o enlaces legales.</li>
+        </ul>
+      </section>
+
+      <section id="formularios">
+        <h2>3. Formularios y Validación Nativa</h2>
+        <p>HTML5 proporciona potentes tipos de entrada de datos que validan la información directamente en el navegador antes de enviarla a un servidor:</p>
+        <pre><code>&lt;form action="#" method="POST"&gt;
+  &lt;label for="username"&gt;Usuario:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username" required minlength="3"&gt;
+
+  &lt;label for="useremail"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="useremail" name="useremail" required&gt;
+
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </section>
+    </main>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
