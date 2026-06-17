@@ -848,3 +848,151 @@ body.dark-mode .back-to-menu-btn:hover {
   opacity: 0.8; 
   color: #0076df;
 }
+
+
+/* --- WIDGET DE CLIMA --- */
+
+.weather-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.weather-top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.weather-top img {
+  width: 30px;  
+  height: 30px;
+}
+
+.weather-temp {
+  font-weight: bold;
+}
+.weather-city {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/*SECCIÓN PROYECTOS  */
+
+#projects {
+
+  padding-bottom: 40px; 
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+.project-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 15px 0;
+}
+.project-tags span {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+.btn-project {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 8px 14px;
+  background: #1e293b;
+  color: #fff;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+.btn-project.live {
+  background: #2563eb;
+}
+.btn-project:hover {
+  opacity: 0.9;
+}
+
+/* Estilos de modo oscuro para las tarjetas de proyectos */
+body.dark-mode .project-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+body.dark-mode .project-card h3 {
+  color: #f8fafc;
+}
+body.dark-mode .project-card p {
+  color: #cbd5e1;
+}
+body.dark-mode .project-tags span {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+/* separamos weather de darkmode */
+
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  color: white;
+
+  background: transparent;
+  
+
+  padding: .5rem .8rem;
+
+  border-radius: 10px;
+
+  transition: var(--transition);
+}
+
+.theme-btn:hover {
+  background: rgba(255,255,255,.1);
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather-widget {
+  min-width: 250px;
+}

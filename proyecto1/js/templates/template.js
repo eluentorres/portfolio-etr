@@ -1,3 +1,4 @@
+
 export const header = `
   <header>
     <nav>
@@ -14,6 +15,8 @@ export const header = `
       </ul>
 
       <div class="nav-actions">
+        <div id="weather-widget" class="weather-widget"></div>
+
         <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
           <span class="mode-icon icon-sun">☀️</span>
           <span class="mode-icon icon-luna">🌙</span>
