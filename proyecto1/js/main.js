@@ -22,3 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
   cheatsheetsList();
   resourcesGenerator();
 });
+
+//  VOLVER AL MENU 
+  const backToMenuBtn = document.getElementById('back-to-menu-btn');
+  if (backToMenuBtn) {
+    backToMenuBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Desplazamiento suave de vuelta al inicio
+      });
+    });
+  }

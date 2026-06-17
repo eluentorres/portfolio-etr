@@ -9,7 +9,7 @@ export const skills = [
   },
   {
     name: "CSS3",
-    icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/css3.svg",
+    icon: "https://res.cloudinary.com/djdz1fcec/image/upload/v1781621475/logo-2582747_1280_kdj6so.webp",
     state: "dominada",
     level: "Avanzado",
     description: "Diseños adaptables y modernos usando Flexbox, Grid y variables nativas.",

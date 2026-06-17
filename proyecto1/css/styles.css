@@ -283,17 +283,17 @@ textarea:focus {
   background: var(--white);
   padding: 1rem;
   padding-bottom: 2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
   border-radius: 4px;
   text-align: center;
-  transform: rotate(-2deg); /* Un toque sutil e informal */
+  transform: rotate(-2deg);
 }
 
 .polaroid img {
-  width: 300px;
+  width: 700px;
   height: 350px;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .polaroid p {
@@ -377,7 +377,7 @@ body .icon-luna { display: none; }
 body.dark-mode .icon-sun { display: none; }
 body.dark-mode .icon-luna { display: inline-block; }
 
-/* CONTENEDOR Y TARJETAS DE SKILLS (GRID) */
+/* CONTENEDOR Y TARJETAS DE SKILLS */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -442,7 +442,7 @@ body.dark-mode .icon-luna { display: inline-block; }
 }
 
 
-/* ESTILOS SPRINT 5 - CHEATSHEETS EN HOME */
+/* CHEATSHEETS EN HOME */
 .cheatsheets-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -490,7 +490,7 @@ body.dark-mode .icon-luna { display: inline-block; }
   font-size: 0.9rem;
 }
 
-/* ESTILOS PÁGINA DE RECURSOS (SISTEMA DE TABS) */
+/* ESTILOS PÁGINA DE RECURSOS */
 .resources-page-main {
   margin-top: 2rem;
 }
@@ -643,7 +643,7 @@ body.dark-mode .tab-btn.active {
 
 
 
-/* ESTILOS DE LAS HOJAS DE TRUCOS (CHEATSHEETS)*/
+/* ESTILOS CHEATSHEETS*/
 
 .cheatsheet-layout {
   display: grid;
@@ -657,7 +657,7 @@ body.dark-mode .tab-btn.active {
 .cheatsheet-sidebar {
   position: -webkit-sticky;
   position: sticky;
-  top: 100px; /* Se queda fija a 100px del borde superior al hacer scroll */
+  top: 100px; 
   background: var(--white);
   padding: 1.5rem;
   border-radius: 12px;
@@ -690,7 +690,7 @@ body.dark-mode .tab-btn.active {
   color: var(--primary);
 }
 
-/* Área de contenido del Cheatsheet */
+/* contenido del Cheatsheet */
 .cheatsheet-main-content {
   display: flex;
   flex-direction: column;
@@ -722,11 +722,11 @@ body.dark-mode .tab-btn.active {
 
 /* Estilos de los Bloques de Código */
 pre {
-  background: #1e293b; /* Fondo azul oscuro/gris para legibilidad */
+  background: #1e293b; 
   color: #e2e8f0;
   padding: 1.5rem;
   border-radius: 8px;
-  overflow-x: auto; /* Scroll horizontal si el código es largo */
+  overflow-x: auto; 
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -770,7 +770,7 @@ body.dark-mode .sticky-nav ul li a:hover {
   color: var(--primary);
 }
 
-/* REQUISITO: DISEÑO RESPONSIVE (Ocultar navegación sticky en móviles) */
+/* DISEÑO RESPONSIVE */
 @media (max-width: 768px) {
   .cheatsheet-layout {
     grid-template-columns: 1fr; /* Una sola columna a pantalla completa */
@@ -784,4 +784,67 @@ body.dark-mode .sticky-nav ul li a:hover {
   .cheatsheet-main-content h1 {
     font-size: 2.2rem;
   }
+}
+
+/* BOTÓN: VOLVER AL MENU*/
+.back-to-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.back-to-menu-btn {
+  background: linear-gradient(135deg, var(--primary, #2563eb), #1d4ed8);
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: var(--fw-bold, 600);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.back-to-menu-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
+.back-to-menu-btn:active {
+  transform: translateY(0);
+}
+
+/* Adaptación del botón al Modo Oscuro */
+body.dark-mode .back-to-menu-container {
+  border-top-color: #334155;
+}
+
+body.dark-mode .back-to-menu-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+}
+
+body.dark-mode .back-to-menu-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+
+/* About */
+
+.about-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.about-link:hover {
+  opacity: 0.8; 
+  color: #0076df;
 }
